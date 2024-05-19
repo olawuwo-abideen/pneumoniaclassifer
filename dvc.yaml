@@ -1,17 +1,17 @@
 stages:
   data_ingestion:
-    cmd: python src/mlp/pipeline/stage_01_data_ingestion.py
+    cmd: python src/pneumoniaClassifier/pipeline/stage_01_data_ingestion.py
     deps:
-      - src/mlp/pipeline/stage_01_data_ingestion.py
+      - src/pneumoniaClassifier/pipeline/stage_01_data_ingestion.py
       - config/config.yaml
     outs:
-      - artifacts/data_ingestion/mlp-scan-image
+      - artifacts/data_ingestion/pneumoniaClassifier-scan-image
 
 
   prepare_base_model:
-    cmd: python src/mlp/pipeline/stage_02_prepare_base_model.py
+    cmd: python src/pneumoniaClassifier/pipeline/stage_02_prepare_base_model.py
     deps:
-      - src/mlp/pipeline/stage_02_prepare_base_model.py
+      - src/pneumoniaClassifier/pipeline/stage_02_prepare_base_model.py
       - config/config.yaml
     params:
       - IMAGE_SIZE
@@ -24,11 +24,11 @@ stages:
 
 
   training:
-    cmd: python src/mlp/pipeline/stage_03_model_training.py
+    cmd: python src/pneumoniaClassifier/pipeline/stage_03_model_training.py
     deps:
-      - src/mlp/pipeline/stage_03_model_training.py
+      - src/pneumoniaClassifier/pipeline/stage_03_model_training.py
       - config/config.yaml
-      - artifacts/data_ingestion/mlp-scan-image
+      - artifacts/data_ingestion/pneumoniaClassifier-scan-image
       - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
@@ -40,11 +40,11 @@ stages:
 
 
   evaluation:
-    cmd: python src/mlp/pipeline/stage_04_model_evaluation.py
+    cmd: python src/pneumoniaClassifier/pipeline/stage_04_model_evaluation.py
     deps:
-      - src/mlp/pipeline/stage_04_model_evaluation.py
+      - src/pneumoniaClassifier/pipeline/stage_04_model_evaluation.py
       - config/config.yaml
-      - artifacts/data_ingestion/mlp-scan-image
+      - artifacts/data_ingestion/pneumoniaClassifier-scan-image
       - artifacts/training/model.h5
     params:
       - IMAGE_SIZE

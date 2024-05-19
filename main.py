@@ -1,8 +1,8 @@
-from mlp import logger
-from mlp.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
-from mlp.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
-from mlp.pipeline.stage_03_model_training import ModelTrainingPipeline
-from mlp.pipeline.stage_04_model_evaluation import EvaluationPipeline
+from pneumoniaClassifier import logger
+from pneumoniaClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from pneumoniaClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
+from pneumoniaClassifier.pipeline.stage_03_model_training import ModelTrainingPipeline
+from pneumoniaClassifier.pipeline.stage_04_model_evaluation import EvaluationPipeline
 
 
 

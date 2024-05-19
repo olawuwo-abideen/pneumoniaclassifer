@@ -6,9 +6,9 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "mlp"
+REPO_NAME = "pneumoniaClassifier"
 AUTHOR_USER_NAME = "abideen-olawuwo"
-SRC_REPO = "mlp"
+SRC_REPO = "pneumoniaClassifier"
 AUTHOR_EMAIL = "abideenolawuwo@gmail.com"
 
 
@@ -17,7 +17,7 @@ setuptools.setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A machine learning project",
+    description="A machine learning project on pneumoniaClassifier",
     long_description=long_description,
     long_description_content="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
