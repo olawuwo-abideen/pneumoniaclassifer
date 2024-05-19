@@ -1,5 +1,11 @@
 # Predict Chest Pneumonia in patient
 
+Predict whether a patient has pneumonia based on chest x-ray image provided
+
+## Data
+
+The dataset was downloaded from[https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia]
+
 ## Workflows
 
 1. Create template.py
